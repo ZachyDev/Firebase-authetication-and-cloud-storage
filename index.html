@@ -48,7 +48,7 @@
             </form>
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-success" onclick="logIn(document. getElementById('emailLogin').value, document. getElementById('passwordLogin').value)">Log In</button>
+            <button type="button" class="btn btn-success" onclick="loginUser()">Log In</button>
         </div>
       </div>
     </div>
@@ -70,14 +70,14 @@
             </form>
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-primary" onclick="register(document.getElementById('emailRegister').value, document.getElementById('passwordRegister').value)">Register</button>
+            <button type="button" class="btn btn-primary" onclick="registerUser()">Register</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -97,5 +97,6 @@
   firebase.initializeApp(firebaseConfig);
 </script>
   <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
   </body>
 </html>
