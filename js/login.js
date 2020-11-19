@@ -11,6 +11,16 @@ const loginUser = () => {
         .catch(err => alert(err.message));
 }
 
+const getUserProfile = () => {
+    let user = firebase.auth().currentUser;
+
+    if(user != null) {
+        console.log(user);
+    }
+    else{
+        console.log('eerr')
+    }
+}
 // sign with Google
 // const signInWithGoogle = () => {
 //     const GOOGLE_AUTH_PROVIDER = new firebase.auth.GoogleAuthProvider();
