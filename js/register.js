@@ -10,4 +10,4 @@ const registerUser = () => {
         .catch(err => {
             alert(err.message);
         })
-}
+}   

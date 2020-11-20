@@ -46,3 +46,25 @@ const updateProfile = () => {
         alert('user does not exist')
     }
 } 
+
+// verify email
+const verifyUser = () => {
+    const user = firebase.auth().currentUser;
+
+    user.sendEmailVerification()
+        .then(() => {
+            alert(`Email sent to ${ user.email }`);
+        })
+        .catch(err => alert(err.message));
+}
+
+// reset password
+const resetPass = () => {
+    const user = firebase.auth().currentUser;
+
+    firebase.auth().sendPasswordResetEmail(user.email)
+        .then(() => {
+            alert(`Email sent to ${ user.email }`)
+        })
+        .catch(err => alert(err.message));
+}
